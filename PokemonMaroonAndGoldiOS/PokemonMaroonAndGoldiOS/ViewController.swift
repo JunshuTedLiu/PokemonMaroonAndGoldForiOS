@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         titleS.controller = self
         scene1.controller = self
         
-        spriteView.presentScene(copyright)
+        spriteView.presentScene(scene1)
     }
     
     override func viewDidLoad() {

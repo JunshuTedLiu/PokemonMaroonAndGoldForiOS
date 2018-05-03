@@ -17,6 +17,8 @@ class Copyright: SKScene {
     var player: AVPlayer? = nil
     var item: AVPlayerItem? = nil
     
+    var upButton: SKNode! = nil
+    
     override func didMove(to view: SKView) {
         if contentsCreated == false {
             playVideo()
@@ -68,11 +70,11 @@ class Copyright: SKScene {
     
     @IBAction func skipToNext(_ sender: Any) {
         
-            player?.pause() // ?
-            let transition = SKTransition.fade(withDuration: 0.1)
-            if let v = self.view {
-                v.presentScene(self.controller.animation, transition: transition)
-            }
+        player?.pause() // ?
+        let transition = SKTransition.fade(withDuration: 0.1)
+        if let v = self.view {
+            v.presentScene(self.controller.animation, transition: transition)
+        }
         
     }
     

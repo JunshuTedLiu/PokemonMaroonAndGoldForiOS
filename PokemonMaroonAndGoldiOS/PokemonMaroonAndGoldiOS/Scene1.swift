@@ -28,7 +28,7 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         //        createEdgeBottom()
         //this is the scene1 background.
-        let scene = SKTexture(imageNamed: "Scene1c.png")
+        let scene = SKTexture(imageNamed: "Scene1,1.png")
         let sceneNode = SKSpriteNode(texture: scene)
         sceneNode.size = CGSize(width: 375, height: 337.5)
         sceneNode.position = CGPoint(x: 187.5, y: 600)
@@ -38,7 +38,7 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         
         addChild(sceneNode)
         //this is our character, ASH.
-        let back = SKTexture(imageNamed: "ASHback.png")
+        let back = SKTexture(imageNamed: "ASHbackT.png")
         let front = SKTexture(imageNamed: "ASHfront.png")
         let left = SKTexture(imageNamed: "ASHleft.png")
         let right = SKTexture(imageNamed: "ASHright.png")

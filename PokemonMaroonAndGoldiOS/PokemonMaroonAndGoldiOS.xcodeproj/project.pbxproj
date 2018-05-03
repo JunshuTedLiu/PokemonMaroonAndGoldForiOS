@@ -24,6 +24,19 @@
 		787319812085130A0057CCBD /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787319802085130A0057CCBD /* Animation.swift */; };
 		78731983208522C10057CCBD /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78731982208522C10057CCBD /* Title.swift */; };
 		78731985208529140057CCBD /* Scene1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78731984208529140057CCBD /* Scene1.swift */; };
+		78869C10209A1CF7001B692E /* Scene2,3.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C04209A1CF6001B692E /* Scene2,3.png */; };
+		78869C11209A1CF7001B692E /* Scene1,2.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C05209A1CF6001B692E /* Scene1,2.png */; };
+		78869C12209A1CF7001B692E /* Scene2,2.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C06209A1CF6001B692E /* Scene2,2.png */; };
+		78869C13209A1CF7001B692E /* Scene2,4.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C07209A1CF6001B692E /* Scene2,4.png */; };
+		78869C14209A1CF7001B692E /* Scene2,5.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C08209A1CF6001B692E /* Scene2,5.png */; };
+		78869C15209A1CF7001B692E /* Scene1,1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C09209A1CF6001B692E /* Scene1,1.png */; };
+		78869C16209A1CF7001B692E /* Scene1,4.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C0A209A1CF7001B692E /* Scene1,4.png */; };
+		78869C17209A1CF7001B692E /* Scene1,3.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C0B209A1CF7001B692E /* Scene1,3.png */; };
+		78869C18209A1CF7001B692E /* Scene1,5.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C0C209A1CF7001B692E /* Scene1,5.png */; };
+		78869C19209A1CF7001B692E /* Scene1,6.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C0D209A1CF7001B692E /* Scene1,6.png */; };
+		78869C1A209A1CF7001B692E /* Scene2,1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C0E209A1CF7001B692E /* Scene2,1.png */; };
+		78869C1B209A1CF7001B692E /* Scene2,6.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C0F209A1CF7001B692E /* Scene2,6.png */; };
+		78869C1D209A1F44001B692E /* ASHbackT.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C1C209A1F44001B692E /* ASHbackT.png */; };
 		78C97597207C2C40001693CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C97596207C2C40001693CC /* AppDelegate.swift */; };
 		78C97599207C2C40001693CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C97598207C2C40001693CC /* ViewController.swift */; };
 		78C9759C207C2C40001693CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C9759A207C2C40001693CC /* Main.storyboard */; };
@@ -68,6 +81,19 @@
 		787319802085130A0057CCBD /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		78731982208522C10057CCBD /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		78731984208529140057CCBD /* Scene1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1.swift; sourceTree = "<group>"; };
+		78869C04209A1CF6001B692E /* Scene2,3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene2,3.png"; sourceTree = "<group>"; };
+		78869C05209A1CF6001B692E /* Scene1,2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene1,2.png"; sourceTree = "<group>"; };
+		78869C06209A1CF6001B692E /* Scene2,2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene2,2.png"; sourceTree = "<group>"; };
+		78869C07209A1CF6001B692E /* Scene2,4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene2,4.png"; sourceTree = "<group>"; };
+		78869C08209A1CF6001B692E /* Scene2,5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene2,5.png"; sourceTree = "<group>"; };
+		78869C09209A1CF6001B692E /* Scene1,1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene1,1.png"; sourceTree = "<group>"; };
+		78869C0A209A1CF7001B692E /* Scene1,4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene1,4.png"; sourceTree = "<group>"; };
+		78869C0B209A1CF7001B692E /* Scene1,3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene1,3.png"; sourceTree = "<group>"; };
+		78869C0C209A1CF7001B692E /* Scene1,5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene1,5.png"; sourceTree = "<group>"; };
+		78869C0D209A1CF7001B692E /* Scene1,6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene1,6.png"; sourceTree = "<group>"; };
+		78869C0E209A1CF7001B692E /* Scene2,1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene2,1.png"; sourceTree = "<group>"; };
+		78869C0F209A1CF7001B692E /* Scene2,6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene2,6.png"; sourceTree = "<group>"; };
+		78869C1C209A1F44001B692E /* ASHbackT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ASHbackT.png; sourceTree = "<group>"; };
 		78C97593207C2C40001693CC /* PokemonMaroonAndGoldiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonMaroonAndGoldiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C97596207C2C40001693CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C97598207C2C40001693CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,12 +174,25 @@
 				780EEBEC207ECD8300B1594F /* Pokemon Opening Animation.mov */,
 				780EEBEE207ECD8300B1594F /* Pokemon Opening Copyright.mov */,
 				780EEBEA207ECD8300B1594F /* Pokemon Opening Title.mov */,
+				78869C1C209A1F44001B692E /* ASHbackT.png */,
 				780EEBF2207ECD8400B1594F /* Scene1c.png */,
 				780EEBEB207ECD8300B1594F /* Scene1Lc.png */,
 				780EEBF4207ECD8400B1594F /* Scene2c.png */,
 				780EEBF5207ECD8400B1594F /* Scene2Rc.png */,
 				780EEBF1207ECD8400B1594F /* Scene3c.png */,
 				780EEBF6207ECD8500B1594F /* Scene3Rc.png */,
+				78869C09209A1CF6001B692E /* Scene1,1.png */,
+				78869C05209A1CF6001B692E /* Scene1,2.png */,
+				78869C0B209A1CF7001B692E /* Scene1,3.png */,
+				78869C0A209A1CF7001B692E /* Scene1,4.png */,
+				78869C0C209A1CF7001B692E /* Scene1,5.png */,
+				78869C0D209A1CF7001B692E /* Scene1,6.png */,
+				78869C0E209A1CF7001B692E /* Scene2,1.png */,
+				78869C06209A1CF6001B692E /* Scene2,2.png */,
+				78869C04209A1CF6001B692E /* Scene2,3.png */,
+				78869C07209A1CF6001B692E /* Scene2,4.png */,
+				78869C08209A1CF6001B692E /* Scene2,5.png */,
+				78869C0F209A1CF7001B692E /* Scene2,6.png */,
 			);
 			path = PokemonMaroonAndGoldiOS;
 			sourceTree = "<group>";
@@ -283,20 +322,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78869C19209A1CF7001B692E /* Scene1,6.png in Resources */,
 				780EEC00207ECD8500B1594F /* ASHleft.png in Resources */,
 				780EEBF9207ECD8500B1594F /* Pokemon Opening Animation.mov in Resources */,
 				780EEBFD207ECD8500B1594F /* ASHback.png in Resources */,
+				78869C10209A1CF7001B692E /* Scene2,3.png in Resources */,
+				78869C1B209A1CF7001B692E /* Scene2,6.png in Resources */,
 				780EEBF7207ECD8500B1594F /* Pokemon Opening Title.mov in Resources */,
 				780EEBFA207ECD8500B1594F /* ASHfront.png in Resources */,
+				78869C18209A1CF7001B692E /* Scene1,5.png in Resources */,
 				780EEC03207ECD8500B1594F /* Scene3Rc.png in Resources */,
 				780EEC01207ECD8500B1594F /* Scene2c.png in Resources */,
 				780EEC02207ECD8500B1594F /* Scene2Rc.png in Resources */,
+				78869C14209A1CF7001B692E /* Scene2,5.png in Resources */,
 				780EEBF8207ECD8500B1594F /* Scene1Lc.png in Resources */,
 				78C975A1207C2C41001693CC /* LaunchScreen.storyboard in Resources */,
+				78869C16209A1CF7001B692E /* Scene1,4.png in Resources */,
+				78869C13209A1CF7001B692E /* Scene2,4.png in Resources */,
 				78C9759E207C2C41001693CC /* Assets.xcassets in Resources */,
+				78869C1D209A1F44001B692E /* ASHbackT.png in Resources */,
+				78869C12209A1CF7001B692E /* Scene2,2.png in Resources */,
+				78869C11209A1CF7001B692E /* Scene1,2.png in Resources */,
 				780EEBFC207ECD8500B1594F /* ASHright.png in Resources */,
 				780EEBFF207ECD8500B1594F /* Scene1c.png in Resources */,
+				78869C1A209A1CF7001B692E /* Scene2,1.png in Resources */,
 				780EEBFE207ECD8500B1594F /* Scene3c.png in Resources */,
+				78869C15209A1CF7001B692E /* Scene1,1.png in Resources */,
+				78869C17209A1CF7001B692E /* Scene1,3.png in Resources */,
 				78C9759C207C2C40001693CC /* Main.storyboard in Resources */,
 				780EEBFB207ECD8500B1594F /* Pokemon Opening Copyright.mov in Resources */,
 			);
