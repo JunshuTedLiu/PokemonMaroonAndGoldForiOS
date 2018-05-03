@@ -15,6 +15,9 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
     var controller: ViewController!
     var randomSource = GKLinearCongruentialRandomSource.sharedRandom()
     
+    let background = SKTexture(imageNamed: "1200px-Nintendo_Gameboy.png")
+    let upTexture = SKTexture(imageNamed: "up.png")
+    
     override func didMove(to view: SKView) {
         if contentsCreated == false {
             backgroundColor = SKColor.white
@@ -22,6 +25,15 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
             contentsCreated = true
             physicsWorld.contactDelegate = self
         }
+        
+        //background
+        
+        
+        //button test
+        let upButton = SKSpriteNode(texture: upTexture)
+//        let atlas = SKTextureAtlas(named: "up")
+        upButton.position = CGPoint(x: view.frame.midX, y: view.frame.height-100)
+        addChild(upButton)
     }
     
     func createSceneObjects() {

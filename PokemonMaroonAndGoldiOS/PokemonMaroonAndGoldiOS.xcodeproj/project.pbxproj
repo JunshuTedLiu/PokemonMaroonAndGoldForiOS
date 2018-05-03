@@ -37,6 +37,15 @@
 		78869C1A209A1CF7001B692E /* Scene2,1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C0E209A1CF7001B692E /* Scene2,1.png */; };
 		78869C1B209A1CF7001B692E /* Scene2,6.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C0F209A1CF7001B692E /* Scene2,6.png */; };
 		78869C1D209A1F44001B692E /* ASHbackT.png in Resources */ = {isa = PBXBuildFile; fileRef = 78869C1C209A1F44001B692E /* ASHbackT.png */; };
+		788F9DA8209BBDC8007F9EEF /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F9D9F209BBDC7007F9EEF /* down.png */; };
+		788F9DA9209BBDC8007F9EEF /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F9DA0209BBDC7007F9EEF /* start.png */; };
+		788F9DAA209BBDC8007F9EEF /* a-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F9DA1209BBDC7007F9EEF /* a-button.png */; };
+		788F9DAB209BBDC8007F9EEF /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F9DA2209BBDC7007F9EEF /* right.png */; };
+		788F9DAC209BBDC8007F9EEF /* 1200px-Nintendo_Gameboy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788F9DA3209BBDC7007F9EEF /* 1200px-Nintendo_Gameboy.jpg */; };
+		788F9DAD209BBDC8007F9EEF /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F9DA4209BBDC7007F9EEF /* select.png */; };
+		788F9DAE209BBDC8007F9EEF /* b-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F9DA5209BBDC8007F9EEF /* b-button.png */; };
+		788F9DAF209BBDC8007F9EEF /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F9DA6209BBDC8007F9EEF /* left.png */; };
+		788F9DB0209BBDC8007F9EEF /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F9DA7209BBDC8007F9EEF /* up.png */; };
 		78C97597207C2C40001693CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C97596207C2C40001693CC /* AppDelegate.swift */; };
 		78C97599207C2C40001693CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C97598207C2C40001693CC /* ViewController.swift */; };
 		78C9759C207C2C40001693CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C9759A207C2C40001693CC /* Main.storyboard */; };
@@ -94,6 +103,15 @@
 		78869C0E209A1CF7001B692E /* Scene2,1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene2,1.png"; sourceTree = "<group>"; };
 		78869C0F209A1CF7001B692E /* Scene2,6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scene2,6.png"; sourceTree = "<group>"; };
 		78869C1C209A1F44001B692E /* ASHbackT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ASHbackT.png; sourceTree = "<group>"; };
+		788F9D9F209BBDC7007F9EEF /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		788F9DA0209BBDC7007F9EEF /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		788F9DA1209BBDC7007F9EEF /* a-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a-button.png"; sourceTree = "<group>"; };
+		788F9DA2209BBDC7007F9EEF /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		788F9DA3209BBDC7007F9EEF /* 1200px-Nintendo_Gameboy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1200px-Nintendo_Gameboy.jpg"; sourceTree = "<group>"; };
+		788F9DA4209BBDC7007F9EEF /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
+		788F9DA5209BBDC8007F9EEF /* b-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b-button.png"; sourceTree = "<group>"; };
+		788F9DA6209BBDC8007F9EEF /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		788F9DA7209BBDC8007F9EEF /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
 		78C97593207C2C40001693CC /* PokemonMaroonAndGoldiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonMaroonAndGoldiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C97596207C2C40001693CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C97598207C2C40001693CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +211,15 @@
 				78869C07209A1CF6001B692E /* Scene2,4.png */,
 				78869C08209A1CF6001B692E /* Scene2,5.png */,
 				78869C0F209A1CF7001B692E /* Scene2,6.png */,
+				788F9DA3209BBDC7007F9EEF /* 1200px-Nintendo_Gameboy.jpg */,
+				788F9DA1209BBDC7007F9EEF /* a-button.png */,
+				788F9DA5209BBDC8007F9EEF /* b-button.png */,
+				788F9D9F209BBDC7007F9EEF /* down.png */,
+				788F9DA6209BBDC8007F9EEF /* left.png */,
+				788F9DA2209BBDC7007F9EEF /* right.png */,
+				788F9DA4209BBDC7007F9EEF /* select.png */,
+				788F9DA0209BBDC7007F9EEF /* start.png */,
+				788F9DA7209BBDC8007F9EEF /* up.png */,
 			);
 			path = PokemonMaroonAndGoldiOS;
 			sourceTree = "<group>";
@@ -326,13 +353,18 @@
 				780EEC00207ECD8500B1594F /* ASHleft.png in Resources */,
 				780EEBF9207ECD8500B1594F /* Pokemon Opening Animation.mov in Resources */,
 				780EEBFD207ECD8500B1594F /* ASHback.png in Resources */,
+				788F9DAC209BBDC8007F9EEF /* 1200px-Nintendo_Gameboy.jpg in Resources */,
 				78869C10209A1CF7001B692E /* Scene2,3.png in Resources */,
 				78869C1B209A1CF7001B692E /* Scene2,6.png in Resources */,
 				780EEBF7207ECD8500B1594F /* Pokemon Opening Title.mov in Resources */,
 				780EEBFA207ECD8500B1594F /* ASHfront.png in Resources */,
 				78869C18209A1CF7001B692E /* Scene1,5.png in Resources */,
+				788F9DAA209BBDC8007F9EEF /* a-button.png in Resources */,
 				780EEC03207ECD8500B1594F /* Scene3Rc.png in Resources */,
+				788F9DA9209BBDC8007F9EEF /* start.png in Resources */,
 				780EEC01207ECD8500B1594F /* Scene2c.png in Resources */,
+				788F9DAE209BBDC8007F9EEF /* b-button.png in Resources */,
+				788F9DA8209BBDC8007F9EEF /* down.png in Resources */,
 				780EEC02207ECD8500B1594F /* Scene2Rc.png in Resources */,
 				78869C14209A1CF7001B692E /* Scene2,5.png in Resources */,
 				780EEBF8207ECD8500B1594F /* Scene1Lc.png in Resources */,
@@ -342,13 +374,17 @@
 				78C9759E207C2C41001693CC /* Assets.xcassets in Resources */,
 				78869C1D209A1F44001B692E /* ASHbackT.png in Resources */,
 				78869C12209A1CF7001B692E /* Scene2,2.png in Resources */,
+				788F9DAD209BBDC8007F9EEF /* select.png in Resources */,
 				78869C11209A1CF7001B692E /* Scene1,2.png in Resources */,
+				788F9DAB209BBDC8007F9EEF /* right.png in Resources */,
+				788F9DB0209BBDC8007F9EEF /* up.png in Resources */,
 				780EEBFC207ECD8500B1594F /* ASHright.png in Resources */,
 				780EEBFF207ECD8500B1594F /* Scene1c.png in Resources */,
 				78869C1A209A1CF7001B692E /* Scene2,1.png in Resources */,
 				780EEBFE207ECD8500B1594F /* Scene3c.png in Resources */,
 				78869C15209A1CF7001B692E /* Scene1,1.png in Resources */,
 				78869C17209A1CF7001B692E /* Scene1,3.png in Resources */,
+				788F9DAF209BBDC8007F9EEF /* left.png in Resources */,
 				78C9759C207C2C40001693CC /* Main.storyboard in Resources */,
 				780EEBFB207ECD8500B1594F /* Pokemon Opening Copyright.mov in Resources */,
 			);
