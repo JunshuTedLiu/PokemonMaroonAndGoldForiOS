@@ -97,7 +97,8 @@ class Scene2of3: SKScene, SKPhysicsContactDelegate {
         //        addChild(character)
         
         let character = SKSpriteNode(texture: back)
-        character.position = CGPoint(x: 200, y: 600)
+        //(x: 20, y: frame.height-20)
+        character.position = CGPoint(x: 20, y: 600)
         character.size = CGSize(width: 28, height: 32)
         character.zPosition = 11
         character.name = "Character"
@@ -224,8 +225,8 @@ class Scene2of3: SKScene, SKPhysicsContactDelegate {
     }
     
     func createEdgeMU() {
-        let MU = SKSpriteNode(color: SKColor.black, size: CGSize(width: 30, height: 30))
-        MU.position = CGPoint(x: (view?.frame.midX)!+25, y: (view?.frame.midY)!+170)
+        let MU = SKSpriteNode(color: SKColor.black, size: CGSize(width: 15, height: 30))
+        MU.position = CGPoint(x: (view?.frame.midX)!+30, y: (view?.frame.midY)!+170)
         MU.zPosition = 12
         MU.physicsBody = SKPhysicsBody(rectangleOf: MU.size)
         MU.name = "MU"

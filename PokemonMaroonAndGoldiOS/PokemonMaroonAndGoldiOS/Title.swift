@@ -67,7 +67,7 @@ class Title: SKScene {
     func playVideo() {
         //        let sample = SKVideoNode(fileNamed: "Pokemon Opening Copyright.mov")
         let sample: SKVideoNode? = {
-            guard let urlString = Bundle.main.path(forResource: "Pokemon Opening Animation", ofType: "mov") else {
+            guard let urlString = Bundle.main.path(forResource: "Pokemon Opening Title", ofType: "mov") else {
                 return nil
             }
             let url = URL(fileURLWithPath: urlString)
