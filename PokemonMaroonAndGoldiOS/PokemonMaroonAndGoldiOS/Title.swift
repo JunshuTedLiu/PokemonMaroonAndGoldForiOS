@@ -17,11 +17,50 @@ class Title: SKScene {
     var player: AVPlayer? = nil
     var item: AVPlayerItem? = nil
     
+    let backgroundTexture = SKTexture(imageNamed: "1200px-Nintendo_Gameboy.jpg")
+    let startButtonTexture = SKTexture(imageNamed: "start.png")
+    
     override func didMove(to view: SKView) {
         if contentsCreated == false {
             playVideo()
             
             contentsCreated = true
+        }
+        
+        //background
+        let backgroundPicture = SKSpriteNode(texture: backgroundTexture)
+        /*sample?.size = CGSize(width: 375, height: 337.5)
+         sample?.position = CGPoint(x: 187.5, y: 600)*/
+        backgroundPicture.position = CGPoint(x: view.frame.midX, y: view.frame.midY+7)
+        backgroundPicture.size = CGSize(width: 390, height: 640.25)
+        addChild(backgroundPicture)
+        
+        //buttons
+        let startButton = SKSpriteNode(texture: startButtonTexture)
+        startButton.name = "start"
+        startButton.position = CGPoint(x: 104, y: 304.5)
+        startButton.size = CGSize(width: 56, height: 42)
+        addChild(startButton)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //        guard let character = childNode(withName: "Character") else { return }
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            let list = nodes(at: location)
+            for node in list {
+                // my code
+                
+                if node.name == "start" {
+                    if let v = self.view {
+                        v.presentScene(self.controller.scene1)
+                    }
+                    //                    let doors = SKTransition.doorsOpenVertical(withDuration: 0.5)
+                    //                    self.view?.presentScene(controller.flappy, transition: doors)
+                    //                    return
+                    print("UP")
+                }
+            }
         }
     }
     
@@ -41,6 +80,7 @@ class Title: SKScene {
         
         sample?.size = CGSize(width: 375, height: 337.5)
         sample?.position = CGPoint(x: 187.5, y: 600)
+        sample?.zPosition = 10
         addChild(sample!)
         sample?.play()
         print("Playing title video.")

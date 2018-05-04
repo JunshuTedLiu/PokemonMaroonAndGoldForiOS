@@ -111,6 +111,7 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         addChild(character)
         
         createEdgeBottom()
+        createEdgeDesignNorthRight()
     }
     
 //    @IBAction func Up(_ sender: Any) {
@@ -191,11 +192,29 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         addChild(bottom)
     }
     
+    func createEdgeDesignNorthRight() {
+        let CDNr = SKSpriteNode(color: SKColor.black, size: CGSize(width: 15, height: 30))
+        CDNr.position = CGPoint(x: (view?.frame.midX)!-25, y: (view?.frame.midY)!+270)
+        CDNr.zPosition = 11
+        CDNr.physicsBody = SKPhysicsBody(rectangleOf: CDNr.size)
+        CDNr.name = "CDNr"
+        
+        CDNr.physicsBody?.usesPreciseCollisionDetection = true
+        CDNr.physicsBody?.contactTestBitMask = 1
+        CDNr.physicsBody?.isDynamic = false
+        
+        addChild(CDNr)
+    }
+    
     func didBegin(_ contact: SKPhysicsContact) {
         print("contact")
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "bottom" {
 //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
             view?.presentScene(controller.scene1of2)
+        }
+        if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "CDNr" {
+            //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
+            view?.presentScene(controller.loseGame)
         }
     }
 }

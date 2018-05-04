@@ -110,6 +110,7 @@ class Scene2of3: SKScene, SKPhysicsContactDelegate {
         
         addChild(character)
         
+        createEdgeMU()
         createEdgeTop()
         createEdgeLeftSide()
         createEdgeBottom()
@@ -222,6 +223,20 @@ class Scene2of3: SKScene, SKPhysicsContactDelegate {
         addChild(bottom)
     }
     
+    func createEdgeMU() {
+        let MU = SKSpriteNode(color: SKColor.black, size: CGSize(width: 30, height: 30))
+        MU.position = CGPoint(x: (view?.frame.midX)!+25, y: (view?.frame.midY)!+170)
+        MU.zPosition = 12
+        MU.physicsBody = SKPhysicsBody(rectangleOf: MU.size)
+        MU.name = "MU"
+        
+        MU.physicsBody?.usesPreciseCollisionDetection = true
+        MU.physicsBody?.contactTestBitMask = 1
+        MU.physicsBody?.isDynamic = false
+        
+        addChild(MU)
+    }
+    
     func didBegin(_ contact: SKPhysicsContact) {
         print("contact")
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "top" {
@@ -231,13 +246,18 @@ class Scene2of3: SKScene, SKPhysicsContactDelegate {
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "left side" {
             print("contact: left side")
-            let goToNextScene = SKTransition.fade(withDuration: 0.5)
+//            let goToNextScene = SKTransition.fade(withDuration: 0.5)
             //            view?.presentScene(controller.scene1L, transition: goToNextScene)
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "bottom" {
             print("contact: bottom")
             //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-            view?.presentScene(controller.scene1of3)
+//            view?.presentScene(controller.scene1of3)
+        }
+        if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "MU" {
+            print("contact: MU")
+            //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
+            view?.presentScene(controller.titleS)
         }
     }
 }

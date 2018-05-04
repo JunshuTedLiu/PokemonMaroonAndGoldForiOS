@@ -182,7 +182,7 @@ class Scene1of2: SKScene, SKPhysicsContactDelegate {
     func createEdgeTop() {
         let top = SKSpriteNode(color: SKColor.blue, size: CGSize(width: frame.width, height: 30))
 //        top.position = CGPoint(x: frame.midX, y: 700)
-        top.position = CGPoint(x: (view?.frame.midX)!, y: (view?.frame.height)!)
+        top.position = CGPoint(x: (view?.frame.midX)!, y: (view?.frame.height)!-28)
 //        // for test. top is now bottom
 //        top.position = CGPoint(x: (view?.frame.midX)!, y: (view?.frame.midY)!+7)
         top.physicsBody = SKPhysicsBody(rectangleOf: top.size)
@@ -231,8 +231,8 @@ class Scene1of2: SKScene, SKPhysicsContactDelegate {
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "left side" {
             print("contact: left side")
-            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-            //            view?.presentScene(controller.scene1L, transition: goToNextScene)
+//            let goToNextScene = SKTransition.fade(withDuration: 0.5)
+//                        view?.presentScene(controller.scene1L, transition: goToNextScene)
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "bottom" {
             print("contact: bottom")

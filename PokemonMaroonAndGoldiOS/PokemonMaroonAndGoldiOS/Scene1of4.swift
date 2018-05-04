@@ -251,7 +251,7 @@ class Scene1of4: SKScene, SKPhysicsContactDelegate {
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "right side" {
             print("contact: right side")
 //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-                        view?.presentScene(controller.scene2of1)
+                        view?.presentScene(controller.scene2of3)
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "bottom" {
             print("contact: bottom")

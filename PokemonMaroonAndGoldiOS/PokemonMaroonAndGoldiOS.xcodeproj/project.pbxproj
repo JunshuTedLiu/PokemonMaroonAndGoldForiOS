@@ -52,6 +52,8 @@
 		78B3B34C209CEAE1001CF36F /* Scene1of6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3B34B209CEAE1001CF36F /* Scene1of6.swift */; };
 		78B3B34E209CEB2B001CF36F /* Scene2of5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3B34D209CEB2B001CF36F /* Scene2of5.swift */; };
 		78B3B350209CEB78001CF36F /* Scene2of6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3B34F209CEB78001CF36F /* Scene2of6.swift */; };
+		78B3B354209D0493001CF36F /* LoseGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3B353209D0493001CF36F /* LoseGame.swift */; };
+		78B3B356209D04E4001CF36F /* YouLost.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B3B355209D04E4001CF36F /* YouLost.png */; };
 		78B97FA1209C28060068CE2A /* Scene1of2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97FA0209C28060068CE2A /* Scene1of2.swift */; };
 		78B97FA3209C53CB0068CE2A /* Scene1of3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97FA2209C53CB0068CE2A /* Scene1of3.swift */; };
 		78B97FA5209CDD8B0068CE2A /* Scene1of4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97FA4209CDD8B0068CE2A /* Scene1of4.swift */; };
@@ -129,6 +131,8 @@
 		78B3B34B209CEAE1001CF36F /* Scene1of6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1of6.swift; sourceTree = "<group>"; };
 		78B3B34D209CEB2B001CF36F /* Scene2of5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2of5.swift; sourceTree = "<group>"; };
 		78B3B34F209CEB78001CF36F /* Scene2of6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2of6.swift; sourceTree = "<group>"; };
+		78B3B353209D0493001CF36F /* LoseGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseGame.swift; sourceTree = "<group>"; };
+		78B3B355209D04E4001CF36F /* YouLost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouLost.png; sourceTree = "<group>"; };
 		78B97FA0209C28060068CE2A /* Scene1of2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1of2.swift; sourceTree = "<group>"; };
 		78B97FA2209C53CB0068CE2A /* Scene1of3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1of3.swift; sourceTree = "<group>"; };
 		78B97FA4209CDD8B0068CE2A /* Scene1of4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1of4.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				78C97596207C2C40001693CC /* AppDelegate.swift */,
 				78C97598207C2C40001693CC /* ViewController.swift */,
 				780EEBE8207EC83D00B1594F /* Copyright.swift */,
+				78B3B353209D0493001CF36F /* LoseGame.swift */,
 				787319802085130A0057CCBD /* Animation.swift */,
 				78731982208522C10057CCBD /* Title.swift */,
 				78731984208529140057CCBD /* Scene1.swift */,
@@ -226,6 +231,7 @@
 				780EEBEE207ECD8300B1594F /* Pokemon Opening Copyright.mov */,
 				780EEBEA207ECD8300B1594F /* Pokemon Opening Title.mov */,
 				78869C1C209A1F44001B692E /* ASHbackT.png */,
+				78B3B355209D04E4001CF36F /* YouLost.png */,
 				780EEBF2207ECD8400B1594F /* Scene1c.png */,
 				780EEBEB207ECD8300B1594F /* Scene1Lc.png */,
 				780EEBF4207ECD8400B1594F /* Scene2c.png */,
@@ -393,6 +399,7 @@
 				780EEBFA207ECD8500B1594F /* ASHfront.png in Resources */,
 				78869C18209A1CF7001B692E /* Scene1,5.png in Resources */,
 				788F9DAA209BBDC8007F9EEF /* a-button.png in Resources */,
+				78B3B356209D04E4001CF36F /* YouLost.png in Resources */,
 				780EEC03207ECD8500B1594F /* Scene3Rc.png in Resources */,
 				788F9DA9209BBDC8007F9EEF /* start.png in Resources */,
 				780EEC01207ECD8500B1594F /* Scene2c.png in Resources */,
@@ -444,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B3B354209D0493001CF36F /* LoseGame.swift in Sources */,
 				78731983208522C10057CCBD /* Title.swift in Sources */,
 				78B3B34A209CEA91001CF36F /* Scene1of5.swift in Sources */,
 				78B97FA9209CE6A00068CE2A /* Scene2of2.swift in Sources */,
