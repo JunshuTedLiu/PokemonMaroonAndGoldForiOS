@@ -15,8 +15,11 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
     var controller: ViewController!
     var randomSource = GKLinearCongruentialRandomSource.sharedRandom()
     
-    let background = SKTexture(imageNamed: "1200px-Nintendo_Gameboy.png")
+    let backgroundTexture = SKTexture(imageNamed: "1200px-Nintendo_Gameboy.jpg")
     let upTexture = SKTexture(imageNamed: "up.png")
+    let downTexture = SKTexture(imageNamed: "down.png")
+    let leftTexture = SKTexture(imageNamed: "left.png")
+    let rightTexture = SKTexture(imageNamed: "right.png")
     
     override func didMove(to view: SKView) {
         if contentsCreated == false {
@@ -27,13 +30,36 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         }
         
         //background
+        let backgroundPicture = SKSpriteNode(texture: backgroundTexture)
+        /*sample?.size = CGSize(width: 375, height: 337.5)
+         sample?.position = CGPoint(x: 187.5, y: 600)*/
+        backgroundPicture.position = CGPoint(x: 100, y: 200)
+        backgroundPicture.size = CGSize(width: 375, height: 112)
+        addChild(backgroundPicture)
         
-        
-        //button test
+        //buttons
         let upButton = SKSpriteNode(texture: upTexture)
+        upButton.name = "up"
 //        let atlas = SKTextureAtlas(named: "up")
-        upButton.position = CGPoint(x: view.frame.midX, y: view.frame.height-100)
+        upButton.position = CGPoint(x: view.frame.midX, y: 300)
+        //view.frame size example
+        /*upButton.position = CGPoint(x: view.frame.midX, y: view.frame.height-100)*/
         addChild(upButton)
+        
+        let downButton = SKSpriteNode(texture: downTexture)
+        downButton.name = "down"
+        downButton.position = CGPoint(x: view.frame.midX, y: 100)
+        addChild(downButton)
+        
+        let leftButton = SKSpriteNode(texture: leftTexture)
+        leftButton.name = "left"
+        leftButton.position = CGPoint(x: view.frame.midX-100, y: 200)
+        addChild(leftButton)
+        
+        let rightButton = SKSpriteNode(texture: rightTexture)
+        rightButton.name = "right"
+        rightButton.position = CGPoint(x: view.frame.midX+100, y: 200)
+        addChild(rightButton)
     }
     
     func createSceneObjects() {
@@ -44,6 +70,7 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         let sceneNode = SKSpriteNode(texture: scene)
         sceneNode.size = CGSize(width: 375, height: 337.5)
         sceneNode.position = CGPoint(x: 187.5, y: 600)
+        sceneNode.zPosition = 10
         guard let v = view else { return }
 //        sceneNode.size = CGSize(width: v.frame.width, height: v.frame.height)
         //        scene1scene.size = CGSize(width: 480, height: 432)
@@ -68,6 +95,7 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         let character = SKSpriteNode(texture: back)
         character.position = CGPoint(x: 187.5, y: 600)
         character.size = CGSize(width: 28, height: 32)
+        character.zPosition = 11
         character.name = "Character"
         //        character.physicsBody = SKPhysicsBody(rectangleOf: character.size)
         character.physicsBody = SKPhysicsBody(texture: back, size: CGSize(width: 28, height: 32))
@@ -91,6 +119,29 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
     //1. make a SKNode
     
     //make our character move.
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let character = childNode(withName: "Character") else { return }
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            let list = nodes(at: location)
+            for node in list {
+                // my code
+                
+                if node.name == "up" {
+                    character.run(SKAction.moveBy(x: 0, y: 20.0, duration: 0.1))
+//                    let doors = SKTransition.doorsOpenVertical(withDuration: 0.5)
+//                    self.view?.presentScene(controller.flappy, transition: doors)
+//                    return
+                }
+                if node.name == "down" {
+                    character.run(SKAction.moveBy(x: 0, y: -20.0, duration: 0.1))
+                }
+                
+            }
+        }
+    }
+    
 //    override func keyDown (with event: NSEvent) {
 //        print("keyCode is \(event.keyCode)")
 //        //keycode
