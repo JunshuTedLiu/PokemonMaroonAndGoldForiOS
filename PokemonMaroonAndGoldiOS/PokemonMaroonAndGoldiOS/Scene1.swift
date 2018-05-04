@@ -110,7 +110,6 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         
         addChild(character)
         
-        createEdgeLeftSide()
         createEdgeBottom()
     }
     
@@ -178,19 +177,6 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
 //        }
 //    }
     
-    func createEdgeLeftSide() {
-        let leftside = SKSpriteNode(color: SKColor.blue, size: CGSize(width: 30, height: frame.height))
-        leftside.position = CGPoint(x: -30, y: frame.midY)
-        leftside.physicsBody = SKPhysicsBody(rectangleOf: leftside.size)
-        leftside.name = "left side"
-        
-        leftside.physicsBody?.usesPreciseCollisionDetection = true
-        leftside.physicsBody?.contactTestBitMask = 1
-        leftside.physicsBody?.isDynamic = false
-        
-        addChild(leftside)
-    }
-    
     func createEdgeBottom() {
         let bottom = SKSpriteNode(color: SKColor.blue, size: CGSize(width: frame.width, height: 30))
 //        bottom.position = CGPoint(x: frame.midX, y: (view?.frame.midY)!+7)
@@ -207,10 +193,6 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         print("contact")
-        if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "left side" {
-            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-//            view?.presentScene(controller.scene1L, transition: goToNextScene)
-        }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "bottom" {
 //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
             view?.presentScene(controller.scene1of2)

@@ -1,5 +1,5 @@
 //
-//  Scene1of3.swift
+//  Scene1of4.swift
 //  PokemonMaroonAndGoldiOS
 //
 //  Created by Junshu Liu on 5/4/18.
@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-class Scene1of3: SKScene, SKPhysicsContactDelegate {
+class Scene1of4: SKScene, SKPhysicsContactDelegate {
     var contentsCreated = false
     var controller: ViewController!
     var randomSource = GKLinearCongruentialRandomSource.sharedRandom()
@@ -70,7 +70,7 @@ class Scene1of3: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         //        createEdgeBottom()
         //this is the scene1 background.
-        let scene = SKTexture(imageNamed: "Scene1,3.png")
+        let scene = SKTexture(imageNamed: "Scene1,4.png")
         let sceneNode = SKSpriteNode(texture: scene)
         sceneNode.size = CGSize(width: 375, height: 337.5)
         sceneNode.position = CGPoint(x: 187.5, y: 600)
@@ -112,6 +112,7 @@ class Scene1of3: SKScene, SKPhysicsContactDelegate {
         
         createEdgeTop()
         createEdgeLeftSide()
+        createEdgeRightSide()
         createEdgeBottom()
     }
     
@@ -208,6 +209,19 @@ class Scene1of3: SKScene, SKPhysicsContactDelegate {
         addChild(leftside)
     }
     
+    func createEdgeRightSide() {
+        let rightside = SKSpriteNode(color: SKColor.blue, size: CGSize(width: 30, height: frame.height))
+        rightside.position = CGPoint(x: frame.width+30, y: (view?.frame.midY)!+168.75)
+        rightside.physicsBody = SKPhysicsBody(rectangleOf: rightside.size)
+        rightside.name = "right side"
+        
+        rightside.physicsBody?.usesPreciseCollisionDetection = true
+        rightside.physicsBody?.contactTestBitMask = 1
+        rightside.physicsBody?.isDynamic = false
+        
+        addChild(rightside)
+    }
+    
     func createEdgeBottom() {
         let bottom = SKSpriteNode(color: SKColor.blue, size: CGSize(width: frame.width, height: 30))
         //        bottom.position = CGPoint(x: frame.midX, y: (view?.frame.midY)!+7)
@@ -227,17 +241,22 @@ class Scene1of3: SKScene, SKPhysicsContactDelegate {
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "top" {
             print("contact: top")
             //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-            view?.presentScene(controller.scene1of2)
+            view?.presentScene(controller.scene1)
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "left side" {
             print("contact: left side")
             let goToNextScene = SKTransition.fade(withDuration: 0.5)
             //            view?.presentScene(controller.scene1L, transition: goToNextScene)
         }
+        if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "right side" {
+            print("contact: right side")
+//            let goToNextScene = SKTransition.fade(withDuration: 0.5)
+                        view?.presentScene(controller.scene2of1)
+        }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "bottom" {
             print("contact: bottom")
-//            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-                        view?.presentScene(controller.scene1of4)
+            //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
+            view?.presentScene(controller.scene1of3)
         }
     }
 }

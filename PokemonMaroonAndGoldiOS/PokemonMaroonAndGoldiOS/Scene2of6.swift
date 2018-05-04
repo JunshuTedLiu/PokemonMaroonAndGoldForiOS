@@ -1,5 +1,5 @@
 //
-//  Scene1of3.swift
+//  Scene2of6.swift
 //  PokemonMaroonAndGoldiOS
 //
 //  Created by Junshu Liu on 5/4/18.
@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-class Scene1of3: SKScene, SKPhysicsContactDelegate {
+class Scene2of6: SKScene, SKPhysicsContactDelegate {
     var contentsCreated = false
     var controller: ViewController!
     var randomSource = GKLinearCongruentialRandomSource.sharedRandom()
@@ -70,7 +70,7 @@ class Scene1of3: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         //        createEdgeBottom()
         //this is the scene1 background.
-        let scene = SKTexture(imageNamed: "Scene1,3.png")
+        let scene = SKTexture(imageNamed: "Scene2,6.png")
         let sceneNode = SKSpriteNode(texture: scene)
         sceneNode.size = CGSize(width: 375, height: 337.5)
         sceneNode.position = CGPoint(x: 187.5, y: 600)
@@ -227,7 +227,7 @@ class Scene1of3: SKScene, SKPhysicsContactDelegate {
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "top" {
             print("contact: top")
             //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-            view?.presentScene(controller.scene1of2)
+            view?.presentScene(controller.scene1)
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "left side" {
             print("contact: left side")
@@ -236,8 +236,8 @@ class Scene1of3: SKScene, SKPhysicsContactDelegate {
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "bottom" {
             print("contact: bottom")
-//            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-                        view?.presentScene(controller.scene1of4)
+            //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
+            view?.presentScene(controller.scene1of3)
         }
     }
 }
