@@ -1,8 +1,8 @@
 //
-//  Scene1.swift
+//  Scene1of2.swift
 //  PokemonMaroonAndGoldiOS
 //
-//  Created by Junshu Liu on 4/16/18.
+//  Created by Junshu Liu on 5/3/18.
 //  Copyright © 2018 Junshu Liu. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-class Scene1: SKScene, SKPhysicsContactDelegate {
+class Scene1of2: SKScene, SKPhysicsContactDelegate {
     var contentsCreated = false
     var controller: ViewController!
     var randomSource = GKLinearCongruentialRandomSource.sharedRandom()
@@ -33,14 +33,14 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         let backgroundPicture = SKSpriteNode(texture: backgroundTexture)
         /*sample?.size = CGSize(width: 375, height: 337.5)
          sample?.position = CGPoint(x: 187.5, y: 600)*/
-        backgroundPicture.position = CGPoint(x: view.frame.midX, y: view.frame.midY+7)
+        backgroundPicture.position = CGPoint(x: view.frame.midX, y: view.frame.midY+10)
         backgroundPicture.size = CGSize(width: 390, height: 640.25)
         addChild(backgroundPicture)
         
         //buttons
         let upButton = SKSpriteNode(texture: upTexture)
         upButton.name = "up"
-//        let atlas = SKTextureAtlas(named: "up")
+        //        let atlas = SKTextureAtlas(named: "up")
         upButton.position = CGPoint(x: 75, y: 335)
         upButton.size = CGSize(width: 36.67, height: 39.33)
         //view.frame size example
@@ -70,13 +70,13 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         //        createEdgeBottom()
         //this is the scene1 background.
-        let scene = SKTexture(imageNamed: "Scene1,1.png")
+        let scene = SKTexture(imageNamed: "Scene1,2.png")
         let sceneNode = SKSpriteNode(texture: scene)
         sceneNode.size = CGSize(width: 375, height: 337.5)
         sceneNode.position = CGPoint(x: 187.5, y: 600)
         sceneNode.zPosition = 10
         guard let v = view else { return }
-//        sceneNode.size = CGSize(width: v.frame.width, height: v.frame.height)
+        //        sceneNode.size = CGSize(width: v.frame.width, height: v.frame.height)
         //        scene1scene.size = CGSize(width: 480, height: 432)
         
         addChild(sceneNode)
@@ -97,7 +97,7 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         //        addChild(character)
         
         let character = SKSpriteNode(texture: back)
-        character.position = CGPoint(x: 187.5, y: 600)
+        character.position = CGPoint(x: 200, y: 600)
         character.size = CGSize(width: 28, height: 32)
         character.zPosition = 11
         character.name = "Character"
@@ -110,15 +110,16 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         
         addChild(character)
         
+        createEdgeTop()
         createEdgeLeftSide()
         createEdgeBottom()
     }
     
-//    @IBAction func Up(_ sender: Any) {
-//        if let node = childNode(withName: "Character") {
-//            node.run(SKAction.moveBy(x: 0, y: 20.0, duration: 0.1))
-//        }
-//    }
+    //    @IBAction func Up(_ sender: Any) {
+    //        if let node = childNode(withName: "Character") {
+    //            node.run(SKAction.moveBy(x: 0, y: 20.0, duration: 0.1))
+    //        }
+    //    }
     
     //1. make a SKNode
     
@@ -134,9 +135,9 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
                 
                 if node.name == "up" {
                     character.run(SKAction.moveBy(x: 0, y: 20.0, duration: 0.1))
-//                    let doors = SKTransition.doorsOpenVertical(withDuration: 0.5)
-//                    self.view?.presentScene(controller.flappy, transition: doors)
-//                    return
+                    //                    let doors = SKTransition.doorsOpenVertical(withDuration: 0.5)
+                    //                    self.view?.presentScene(controller.flappy, transition: doors)
+                    //                    return
                     print("UP")
                 }
                 if node.name == "down" {
@@ -155,28 +156,44 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-//    override func keyDown (with event: NSEvent) {
-//        print("keyCode is \(event.keyCode)")
-//        //keycode
-//        if let node = childNode(withName: "Character") {
-//            //right
-//            if event.keyCode == 124 {
-//                node.run(SKAction.moveBy(x: 20.0, y: 0, duration: 0.1))
-//            }
-//                //left
-//            else if event.keyCode == 123 {
-//                node.run(SKAction.moveBy(x: -20.0, y: 0, duration: 0.1))
-//            }
-//                //up
-//            else if event.keyCode == 126 {
-//                node.run(SKAction.moveBy(x: 0, y: 20.0, duration: 0.1))
-//            }
-//                //down
-//            else if event.keyCode == 125 {
-//                node.run(SKAction.moveBy(x: 0, y: -20.0, duration: 0.1))
-//            }
-//        }
-//    }
+    //    override func keyDown (with event: NSEvent) {
+    //        print("keyCode is \(event.keyCode)")
+    //        //keycode
+    //        if let node = childNode(withName: "Character") {
+    //            //right
+    //            if event.keyCode == 124 {
+    //                node.run(SKAction.moveBy(x: 20.0, y: 0, duration: 0.1))
+    //            }
+    //                //left
+    //            else if event.keyCode == 123 {
+    //                node.run(SKAction.moveBy(x: -20.0, y: 0, duration: 0.1))
+    //            }
+    //                //up
+    //            else if event.keyCode == 126 {
+    //                node.run(SKAction.moveBy(x: 0, y: 20.0, duration: 0.1))
+    //            }
+    //                //down
+    //            else if event.keyCode == 125 {
+    //                node.run(SKAction.moveBy(x: 0, y: -20.0, duration: 0.1))
+    //            }
+    //        }
+    //    }
+    
+    func createEdgeTop() {
+        let top = SKSpriteNode(color: SKColor.blue, size: CGSize(width: frame.width, height: 30))
+//        top.position = CGPoint(x: frame.midX, y: 700)
+        top.position = CGPoint(x: (view?.frame.midX)!, y: (view?.frame.height)!)
+//        // for test. top is now bottom
+//        top.position = CGPoint(x: (view?.frame.midX)!, y: (view?.frame.midY)!+7)
+        top.physicsBody = SKPhysicsBody(rectangleOf: top.size)
+        top.name = "top"
+        
+        top.physicsBody?.usesPreciseCollisionDetection = true
+        top.physicsBody?.contactTestBitMask = 1
+        top.physicsBody?.isDynamic = false
+        
+        addChild(top)
+    }
     
     func createEdgeLeftSide() {
         let leftside = SKSpriteNode(color: SKColor.blue, size: CGSize(width: 30, height: frame.height))
@@ -193,7 +210,7 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
     
     func createEdgeBottom() {
         let bottom = SKSpriteNode(color: SKColor.blue, size: CGSize(width: frame.width, height: 30))
-//        bottom.position = CGPoint(x: frame.midX, y: (view?.frame.midY)!+7)
+        //        bottom.position = CGPoint(x: frame.midX, y: (view?.frame.midY)!+7)
         bottom.position = CGPoint(x: (view?.frame.midX)!, y: (view?.frame.midY)!+7)
         bottom.physicsBody = SKPhysicsBody(rectangleOf: bottom.size)
         bottom.name = "bottom"
@@ -207,13 +224,20 @@ class Scene1: SKScene, SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         print("contact")
+        if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "top" {
+            print("contact: top")
+//            let goToNextScene = SKTransition.fade(withDuration: 0.5)
+            view?.presentScene(controller.scene1)
+        }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "left side" {
+            print("contact: left side")
             let goToNextScene = SKTransition.fade(withDuration: 0.5)
-//            view?.presentScene(controller.scene1L, transition: goToNextScene)
+            //            view?.presentScene(controller.scene1L, transition: goToNextScene)
         }
         if contact.bodyA.node?.name == "character" || contact.bodyB.node?.name == "bottom" {
+            print("contact: bottom")
 //            let goToNextScene = SKTransition.fade(withDuration: 0.5)
-            view?.presentScene(controller.scene1of2)
+                        view?.presentScene(controller.scene1of3)
         }
     }
 }

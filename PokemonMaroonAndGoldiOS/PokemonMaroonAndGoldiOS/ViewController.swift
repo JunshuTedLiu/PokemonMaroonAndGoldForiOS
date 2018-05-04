@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     var animation: Animation!
     var titleS: Title!
     var scene1: Scene1!
+    var scene1of2: Scene1of2!
+    var scene1of3: Scene1of3!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated) //add parameter for ios
@@ -25,11 +27,15 @@ class ViewController: UIViewController {
         animation = Animation(size: CGSize(width: view.frame.width, height: view.frame.height))
         titleS = Title(size: CGSize(width: view.frame.width, height: view.frame.height))
         scene1 = Scene1(size: CGSize(width: view.frame.width, height: view.frame.height))
+        scene1of2 = Scene1of2(size: CGSize(width: view.frame.width, height: view.frame.height))
+        scene1of3 = Scene1of3(size: CGSize(width: view.frame.width, height: view.frame.height))
         
         copyright.controller = self
         animation.controller = self
         titleS.controller = self
         scene1.controller = self
+        scene1of2.controller = self
+        scene1of3.controller = self
         
         spriteView.presentScene(scene1)
     }
