@@ -38,7 +38,7 @@ class Copyright: SKScene {
         //buttons
         let startButton = SKSpriteNode(texture: startButtonTexture)
         startButton.name = "start"
-        startButton.position = CGPoint(x: 104, y: 304.5)
+        startButton.position = CGPoint(x: 195, y: 334.5)
         startButton.size = CGSize(width: 56, height: 42)
         addChild(startButton)
     }
